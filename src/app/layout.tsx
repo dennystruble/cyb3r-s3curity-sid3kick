@@ -1,13 +1,12 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import Providers from '@/components/session-provider'
+import "./globals.css"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: 'Cybersecurity Learning Platform',
-  description: 'Learn cybersecurity with interactive lessons and AI assistance',
+  title: "Cybersecurity Learning Platform",
+  description: "Learn cybersecurity with interactive lessons and AI assistance",
 }
 
 export default function RootLayout({
@@ -18,9 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>
-          {children}
-        </Providers>
+        {children}
       </body>
     </html>
   )
